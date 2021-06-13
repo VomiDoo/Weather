@@ -9,4 +9,8 @@ function openNotification (num, arr) {
     })
 }
 
-module.exports = { openNotification }
+function saveLocalStorage (num) {
+    localStorage.setItem('page', num)
+}
+
+module.exports = { openNotification, saveLocalStorage }

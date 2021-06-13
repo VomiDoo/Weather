@@ -2,9 +2,9 @@ import './style.css';
 
 const test = /[0-9]/g
 const _ = require('lodash');
-const { printWeather, printHistory, printNotification} = require ('./components/printComponents')
-const { setLocal, saveLocalStorage } = require ('./components/history')
-const { openNotification } = require ('./components/notification')
+const { printWeather, printNotification} = require ('./components/printComponents')
+const { setLocal, printHistory } = require ('./components/history')
+const { openNotification, saveLocalStorage } = require ('./components/notification')
 
 
 function HistoryObject (data) {
