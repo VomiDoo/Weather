@@ -48,7 +48,7 @@ const fetchAPI = (coord) => {
 }
 
 function createHistory () {
-    history.forEach(i => {
+    _.forEach(history, i => {
         document.querySelector('.history__ul').insertAdjacentHTML('beforeend',`<li class="history__li">
                                                                                 <p class="history__name border">${i.location}</p>
                                                                                 <p class="history__temperature border">${i.temperature} &#8451;</p>
