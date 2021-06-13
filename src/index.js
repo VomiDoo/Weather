@@ -2,7 +2,9 @@ import './style.css';
 
 const test = /[0-9]/g
 const _ = require('lodash');
-const { printWeather } = require ('./printWeather')
+const { printWeather, printHistory, printNotification} = require ('./components/printComponents')
+const { setLocal, saveLocalStorage } = require ('./components/history')
+const { openNotification } = require ('./components/notification')
 
 
 function HistoryObject (data) {
@@ -18,22 +20,6 @@ function HistoryObject (data) {
     this.discription = data.current.weather_descriptions;
 }
 
-let history = []
-
-function setLocal (weather){
-    history.unshift(weather);
-    history = _.uniqBy(history, (o) => o.location)
-	history = _.take(history, 5)
-	localStorage.setItem('history', JSON.stringify(history))
-}
-
-function getLocal () {
-    if(localStorage.getItem('history')) {
-        history = JSON.parse(localStorage.getItem('history'))
-    }
-}
-getLocal()
-
 
 const fetchAPI = (coord) => {
     const city =  document.querySelector('.header__input--city').value || coord;
@@ -46,17 +32,6 @@ const fetchAPI = (coord) => {
                 setLocal(town)
             })    
     } 
-}
-
-function createHistory () {
-    _.forEach(history, i => {
-        document.querySelector('.history__ul').insertAdjacentHTML('beforeend',`<li class="history__li">
-                                                                                <p class="history__name border">${i.location}</p>
-                                                                                <p class="history__temperature border">${i.temperature} &#8451;</p>
-                                                                                <p class="history__weather border"><img src="${i.icon}" class="history__weather-icon"></p>
-                                                                                <p class="history__wind border">${i.windSpeed} km/s ${i.windDir}</p>
-                                                                            </li>`)
-    })
 }
 
 document.querySelector('.header').addEventListener('click', e => {
@@ -74,7 +49,7 @@ document.querySelector('.header').addEventListener('click', e => {
     if (e.target === document.querySelector('.open-history-btn')){
         document.querySelector('.history').classList.add('history__open')
         document.querySelector('.history__wrap').classList.add('history__open')
-        createHistory()
+        printHistory()
     }
 
     if (e.target === document.querySelector('.open-notification-btn')){
@@ -105,48 +80,17 @@ document.querySelector('.header__input--country').addEventListener('keypress', e
 })
 
 
-// History
-
-document.querySelector('.history__close-btn').addEventListener('click', () => {
-    document.querySelector('.history').classList.remove('history__open')
-    document.querySelector('.history__wrap').classList.remove('history__open')
-    document.querySelector('.history__ul').innerHTML = ''
-})
-
-
 // Notification
-
-
-function createNotification (title, text, num) {
-    return ` <div class="notification__inform none a${num}">
-                <h2 class="notification__title">${num + 1}. ${title}</h2>
-                <p class="notification__text">${text}</p>
-            </div>`
-}
-
-function openNotification (num, arr) {
-    if (document.getElementById(`${num}`).checked === true) {
-        document.querySelector(`.a${num}`).classList.remove('none')
-    } 
-    arr.querySelectorAll('input[type=radio]').forEach(i => {
-        if (!i.checked) {
-            document.querySelector(`.a${i.id}`).classList.add('none')
-        }
-    })
-}
-
-function saveLocalStorage (num) {
-    localStorage.setItem('page', num)
-}
 
 
 fetch('./MOCK_DATA.json').then(response => response.json())
     .then(data => {
         for (let i = 0; i < data.length; i++) {
-            document.querySelector('.notification').innerHTML += createNotification(data[i].title, data[i].phrase, i)
+            document.querySelector('.notification').innerHTML += printNotification(data[i].title, data[i].phrase, i)
             document.querySelector('.pages').innerHTML +=`<input type = 'radio' id = '${i}' name = 'input'>`
         }
         const inputArr = document.querySelector('.pages');
+
         if (localStorage.getItem('page')) {
             openNotification(localStorage.getItem('page'), inputArr)
         } else {
