@@ -5,7 +5,7 @@
 * [Technologies used](#technologies)
 * [Eslint](#eslint)
 * [Build](#build)
-<br/>
+
 ---
 ## Project description
 ---
