@@ -57,9 +57,19 @@ $npm run lint:fix
 ---
 ## Build
 ---
-### For build this app use command: 
+### For build like development this app use command: 
 ```
-$ npm run build
+$ npm run build:dev
+```
+
+### For build like prod this app use command: 
+```
+$ npm run build:prod
+```
+
+### For use webpack serve:
+```
+$ npm run serve
 ```
 
 ## Thank you for attention to my child <3
