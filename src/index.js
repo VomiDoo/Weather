@@ -1,5 +1,5 @@
 const test = /[0-9]/g
-// const _ = require('lodash');
+const _ = require('lodash');
 import './style.css';
 const { printWeather } = require ('./printWeather')
 
@@ -21,7 +21,8 @@ let history = []
 
 function setLocal (weather){
     history.unshift(weather);
-	history.length = 5
+    history = _.uniqBy(history, (o) => o.location)
+	history = _.take(history, 5)
 	localStorage.setItem('history', JSON.stringify(history))
 }
 
@@ -33,17 +34,15 @@ function getLocal () {
 getLocal()
 
 
-
 const fetchAPI = (coord) => {
     const city =  document.querySelector('.header__input--city').value || coord;
     if (!city.match(test)) {
-        fetch(`http://api.weatherstack.com/current?access_key=8b381b83f1d5a8436bbb94c6d780f9e4&query=${city}`)
+        fetch(`http://api.weatherstack.com/current?access_key=bdeec7a4beb014daa4415d15b0447360&query=${city}`)
             .then(data => data.json())
             .then(data => {
                 const town = new HistoryObject(data)
                 printWeather(town)
                 setLocal(town)
-                console.log(history);
             })    
     } 
 }
@@ -62,7 +61,8 @@ function createHistory () {
 document.querySelector('.header').addEventListener('click', e => {
     if (e.target === document.querySelector('.my-weather__btn')) {
         navigator.geolocation.getCurrentPosition(position => {
-            fetchAPI((`${position.coords.latitude.toFixed(4)  },${  position.coords.longitude.toFixed(4)}`))
+            let coords = _.join([(`${position.coords.latitude.toFixed(4)  },${  position.coords.longitude.toFixed(4)}`)], ',')
+            fetchAPI(coords)
         });
     }
     if (e.target === document.querySelector('.header__btn')){

@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "browserify": "^17.0.0"
+    "browserify": "^17.0.0",
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
     "css-loader": "^5.2.6",
