@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrap wrap--bg">
+        <header class="header">
+            <div>
+                <button class = "my-weather__btn btn"> My Weather</button>
+                <button class="open-history-btn btn">History</button>
+                <label><input class="header__input--country" type="text" placeholder="Enter your country"></label>
+                <label><input class="header__input--city" type="text" placeholder="Enter your city"></label>
+                <button class="header__btn btn">Find</button>
+                <button class = "open-notification-btn btn">Open</button>
+                <button class="clear-local-btn btn">Clear</button>
+            </div>
+        </header>
+        <div class="main">
+            <h2 class="main__title"></h2>
+            <p class="main__day"></p>
+            <h3 class="main__temperature"></h3>
+            <div class="main__img"></div>
+            <div class="main__body">
+                <div class="main__box">
+                    <p class="inform__time"></p>
+                    <p class="inform__pressure"></p>
+                </div>
+                <div class="main__box">
+                    <p class="inform__feelslike"></p>
+                    <p class="inform__weather"></p>
+                </div>
+                <div class="main__box">
+                    <p class="wind-direction"></p>
+                    <p class="wind-speed"></p>
+                </div>
+            </div>
+        </div>
+        <div class="history__wrap">
+            <div class="history">
+                <div class="history__header">
+                    <h2 class = "history__title">Your history</h2>
+                    <button class="history__close-btn">&#10006;</button>
+                </div>
+                <div class="history__li">
+                    <p class="history__name title">Country, City</p>
+                    <p class="history__temperature title">Temperature, &#8451;</p>
+                    <p class="history__weather title">Weater</p>
+                    <p class="history__wind title">Wind</p>
+                </div>
+                <ul class="history__ul"></ul>
+            </div>
+        </div>
+        <div class="notification">
+            <button class="notification__close-btn">&#10006;</button>
+            <input type="checkbox" class="notification__disable">
+            <div class="notification__pages">
+                <button class="left-btn notification__btn">&#5130;</button>
+                <div class="pages"></div>
+                <button class="right-btn notification__btn">&#5125;</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
