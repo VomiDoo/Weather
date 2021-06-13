@@ -9,19 +9,21 @@
 ---
 ## Project description
 ---
-#### This app sends your request to [REST API](https://weatherstack.com/). Then draws:
+
+This app sends your request to [REST API](https://weatherstack.com/). Then draws:
+
   1. The name of the selected city, 
   2. Temperature, 
   3. Local time,
   4. Pressure,
   5. Wind speed and direction
   
-  #### Also the application has a function of requesting weather according to your geolocation. By pressing the button <*History*> you can see you can see the history of the last five requests.
-  
-  
-  #### On the page you will see notifications and when you click on the checkbox, you can disable the opening of notifications on the page, if you click <*Open*> button, you open them back.
+ Also the application has a function of requesting weather according to your geolocation. By pressing the button <*History*> you can see you can see the history of the last five requests.
 
-  #### To clear your history click button <*Clear*>
+On the page you will see notifications and when you click on the checkbox, you can disable the opening of notifications on the page, if you click <*Open*> button, you open them back. 
+
+To clear your history click button <*Clear*>
+
 ---
 ## Technologies
 ---
