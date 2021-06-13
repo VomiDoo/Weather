@@ -67,7 +67,7 @@ $ npm run build:dev
 $ npm run build:prod
 ```
 
-### For use webpack serve:
+### For use webpack serve :
 ```
 $ npm run serve
 ```
