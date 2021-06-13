@@ -1,6 +1,7 @@
+import './style.css';
+
 const test = /[0-9]/g
 const _ = require('lodash');
-import './style.css';
 const { printWeather } = require ('./printWeather')
 
 
@@ -61,7 +62,7 @@ function createHistory () {
 document.querySelector('.header').addEventListener('click', e => {
     if (e.target === document.querySelector('.my-weather__btn')) {
         navigator.geolocation.getCurrentPosition(position => {
-            let coords = _.join([(`${position.coords.latitude.toFixed(4)  },${  position.coords.longitude.toFixed(4)}`)], ',')
+            const coords = _.join([(`${position.coords.latitude.toFixed(4)  },${  position.coords.longitude.toFixed(4)}`)], ',')
             fetchAPI(coords)
         });
     }
