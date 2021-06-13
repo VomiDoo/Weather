@@ -1,6 +1,6 @@
 const test = /[0-9]/g
 // const _ = require('lodash');
-
+import './style.css';
 const { printWeather } = require ('./printWeather')
 
 
