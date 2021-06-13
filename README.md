@@ -14,10 +14,8 @@
   3. Local time,
   4. Pressure,
   5. Wind speed and direction
-  <br/>
+  
   ### Also the application has a function of requesting weather according to your geolocation. By pressing the button <*History*> you can see you can see the history of the last five requests.
-  <br/>
-
   ### On the page you will see notifications and when you click on the checkbox, you can disable the opening of notifications on the page, if you click <*Open*> button, you open them back.
   <br/>
 
