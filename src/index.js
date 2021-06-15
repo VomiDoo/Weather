@@ -83,7 +83,7 @@ document.querySelector('.header__input--country').addEventListener('keypress', e
 // Notification
 
 
-fetch('./MOCK_DATA.json').then(response => response.json())
+fetch('MOCK_DATA.json').then(response => response.json())
     .then(data => {
         for (let i = 0; i < data.length; i++) {
             document.querySelector('.notification').innerHTML += printNotification(data[i].title, data[i].phrase, i)

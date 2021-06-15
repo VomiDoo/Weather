@@ -1,7 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const { merge } = require('webpack-merge');
-const base = require('./webpack.config.base')
+const base = require('./webpack.config.base');
 
 const dev = merge(base, {
     mode: 'development',
@@ -16,7 +16,7 @@ const dev = merge(base, {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Output Management',
+            title: 'Weather',
             template: './src/index.html',
         })
     ],
