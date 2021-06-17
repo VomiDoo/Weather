@@ -1,0 +1,19 @@
+{
+  "name": "weather",
+  "version": "1.0.0",
+  "description": "Weather app. Api https://weatherstack.com/",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VomiDoo/Weather.git"
+  },
+  "author": "Darya Krupko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VomiDoo/Weather/issues"
+  },
+  "homepage": "https://github.com/VomiDoo/Weather#readme"
+}
