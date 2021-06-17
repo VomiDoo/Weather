@@ -1,9 +1,9 @@
-// import './style.css';
+import { printWeather } from './components/printComponents';
+import { setLocal, printHistory } from './components/history';
+import './style.css';
 
 const test = /[0-9]/g;
 const _ = require('lodash');
-const { printWeather } = require('./components/printComponents');
-const { setLocal, printHistory } = require('./components/history');
 
 function HistoryObject(data) {
   this.location = `${data.location.country}, ${data.location.region}`;
@@ -56,11 +56,6 @@ document.querySelector('.header').addEventListener('click', (e) => {
     document.querySelector('.history').classList.add('history__open');
     document.querySelector('.history__wrap').classList.add('history__open');
     printHistory();
-  }
-
-  if (e.target === document.querySelector('.open-notification-btn')) {
-    localStorage.removeItem('disable');
-    document.querySelector('.notification').style.display = 'block';
   }
   if (e.target === document.querySelector('.clear-local-btn')) {
     localStorage.removeItem('history');
