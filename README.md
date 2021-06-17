@@ -11,3 +11,10 @@ $ npm run lint
 $npm run lint:fix
 ```
 ---
+## Browserify
+---
+### To run bundle you need next command:
+```
+$ npm run bundle
+```
+---

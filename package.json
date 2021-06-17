@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "bundle": "./node_modules/.bin/browserify src/index.js > dist/bundle.js"
   },
   "repository": {
     "type": "git",
@@ -25,5 +26,9 @@
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-prettier": "^3.4.0",
     "prettier": "2.3.1"
+  },
+  "dependencies": {
+    "browserify": "^17.0.0",
+    "lodash": "^4.17.21"
   }
 }
