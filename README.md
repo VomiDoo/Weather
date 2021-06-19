@@ -1,6 +1,5 @@
 # WeatherApp
 ---
-https://vomidoo.github.io/Weather/
 ## Content
 * [Progect description](#progect-description)
 * [Technologies used](#technologies)
@@ -77,3 +76,5 @@ $ npm run serve
 ```
 
 ## Thank you for attention to my child <3
+
+https://vomidoo.github.io/Weather/
