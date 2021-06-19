@@ -1,7 +1,5 @@
 # WeatherApp
 ---
-https://vomidoo.github.io/Weather/dist/
----
 ## Content
 * [Progect description](#progect-description)
 * [Technologies used](#technologies)
