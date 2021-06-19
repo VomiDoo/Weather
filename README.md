@@ -76,5 +76,3 @@ $ npm run serve
 ```
 
 ## Thank you for attention to my child <3
-
-https://vomidoo.github.io/Weather/
