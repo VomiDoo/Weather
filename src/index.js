@@ -1,9 +1,9 @@
-// import './style.css';
+import { printWeather } from './components/printWeather';
+import { setLocal, printHistory } from './components/history';
+import './style.css';
 
 const test = /[0-9]/g;
 const _ = require('lodash');
-const { printWeather } = require('./components/printWeather');
-const { setLocal, printHistory } = require('./components/history');
 
 const getHistoryObject = (data) => {
   const icon = data.current.weather_icons[0];
