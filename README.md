@@ -79,5 +79,5 @@ $ npm run build:prod
 ```
 $ npm run start
 ```
-
+---
 ## Thank you for attention to my child <3
