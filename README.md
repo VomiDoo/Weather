@@ -45,6 +45,11 @@ To clear your history click button <*Clear*>
  * "webpack-cli": "v4.7.2",
  * "webpack-dev-server": "v3.11.2",
  * "webpack-merge": "v5.8.0"
+
+ ### To install devDependencies use:
+ ```
+$ npm i
+ ```
    
 ---
 ## Eslint
@@ -72,7 +77,7 @@ $ npm run build:prod
 
 ### For use webpack serve :
 ```
-$ npm run serve
+$ npm run start
 ```
 
 ## Thank you for attention to my child <3

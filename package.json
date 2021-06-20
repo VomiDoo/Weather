@@ -8,7 +8,7 @@
     "lint:fix": "eslint . --fix",
     "build:dev": "webpack --config ./webpack.config.dev.js",
     "build:prod": "webpack --config ./webpack.config.prod.js",
-    "serve": "webpack serve --config ./webpack.config.dev.js"
+    "start": "webpack serve --config ./webpack.config.dev.js"
   },
   "repository": {
     "type": "git",
