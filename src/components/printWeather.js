@@ -1,4 +1,4 @@
-function printWeather (data) {
+const printWeather = (data) => {
     document.querySelector('.main__title').innerHTML = data.location
     document.querySelector('.main__temperature').innerHTML = `${data.temperature} &#8451;`
     document.querySelector('.main__img').style.backgroundImage = `url(${data.icon})`
@@ -11,11 +11,4 @@ function printWeather (data) {
 }
 
 
-function printNotification (title, text, num) {
-    return ` <div class="notification__inform none a${num}">
-                <h2 class="notification__title">${num + 1}. ${title}</h2>
-                <p class="notification__text">${text}</p>
-            </div>`
-}
-
-module.exports = { printWeather, printNotification };
+module.exports = { printWeather };
