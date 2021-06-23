@@ -11,14 +11,14 @@ const prepareModule = () => {
 
 let history = prepareModule();
 
-const setLocal = (weather) => {
+export const setLocal = (weather) => {
     history.unshift(weather);
     history = _.uniqBy(history, (e) => e.location)
 	history = _.take(history, 5)
 	localStorage.setItem('history', JSON.stringify(history))
 };
 
-const printHistory = () => {
+export const printHistory = () => {
     _.forEach(history, i => {
         document.querySelector('.history__ul').insertAdjacentHTML('beforeend',`<li class="history__li">
                                                                                 <p class="history__name border">${i.location}</p>
@@ -28,4 +28,3 @@ const printHistory = () => {
                                                                             </li>`)
     })
 }
-module.exports = { setLocal, printHistory }

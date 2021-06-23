@@ -4,12 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build:dev": "webpack --config ./webpack.config.dev.js",
-    "build:prod": "webpack --config ./webpack.config.prod.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "serve": "webpack serve --config ./webpack.config.dev.js"
+    "build:dev": "webpack --config ./webpack.config.dev.js",
+    "build:prod": "webpack --config ./webpack.config.prod.js",
+    "start": "webpack serve --config ./webpack.config.dev.js"
   },
   "repository": {
     "type": "git",
@@ -21,13 +20,11 @@
     "url": "https://github.com/VomiDoo/Weather/issues"
   },
   "homepage": "https://github.com/VomiDoo/Weather#readme",
-  "dependencies": {
-    "browserify": "^17.0.0",
-    "lodash": "^4.17.21"
-  },
   "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.5",
+    "babel-loader": "^8.2.2",
     "css-loader": "^5.2.6",
-    "dev-server": "^0.2.0",
     "eslint": "^7.28.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^8.3.0",
@@ -37,9 +34,12 @@
     "html-webpack-plugin": "^5.3.1",
     "prettier": "2.3.1",
     "style-loader": "^2.0.0",
-    "webpack": "^5.38.1",
+    "webpack": "^5.39.1",
     "webpack-cli": "^4.7.2",
     "webpack-dev-server": "^3.11.2",
     "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
   }
 }
