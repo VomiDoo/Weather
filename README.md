@@ -28,21 +28,29 @@ To clear your history click button <*Clear*>
 ## Technologies
 ---
 ### To create this app used: 
- * HTML5, CSS3, JS,
- * Webpack v5.38.1,
- * Webpack-cli v4.7.2,
- * Css-loader v5.2.6,
- * Eslint v7.28.0,
- * Eslint-config-airbnb-base v14.2.1,
- * Eslint-config-prettier v8.3.0,
- * Eslint-plugin-import v2.23.4,
- * Eslint-plugin-prettier v3.4.0,
- * File-loader v6.2.0,
- * Prettier v2.3.1,
- * Style-loader v2.0.0,
- * Lodash v4.17.21
-    
-    
+ * "@babel/core": "v7.14.6",
+ * "@babel/preset-env": "v7.14.5",
+ * "babel-loader": "v8.2.2",
+ * "css-loader": "v5.2.6",
+ * "eslint": "v7.28.0",
+ * "eslint-config-airbnb-base": "v14.2.1",
+ * "eslint-config-prettier": "v8.3.0",
+ * "eslint-plugin-import": "v2.23.4",
+ * "eslint-plugin-prettier": "v3.4.0",
+ * "file-loader": "v6.2.0",
+ * "html-webpack-plugin": "v5.3.1",
+ * "prettier": "v2.3.1",
+ * "style-loader": "v2.0.0",
+ * "webpack": "v5.39.1",
+ * "webpack-cli": "v4.7.2",
+ * "webpack-dev-server": "v3.11.2",
+ * "webpack-merge": "v5.8.0"
+
+ ### To install devDependencies use:
+ ```
+$ npm i
+ ```
+   
 ---
 ## Eslint
 ---
@@ -69,7 +77,7 @@ $ npm run build:prod
 
 ### For use webpack serve :
 ```
-$ npm run serve
+$ npm run start
 ```
-
+---
 ## Thank you for attention to my child <3
