@@ -2,9 +2,9 @@ const _ = require('lodash');
 
 const prepareModule = () => {
   document.querySelector('.history__close-btn').addEventListener('click', () => {
-    document.querySelector('.history').classList.remove('history__open')
-    document.querySelector('.history__wrap').classList.remove('history__open')
-    document.querySelector('.history__ul').innerHTML = ''
+    document.querySelector('.history').classList.remove('history__open');
+    document.querySelector('.history__wrap').classList.remove('history__open');
+    document.querySelector('.history__ul').innerHTML = '';
   })
   return localStorage.getItem('history') ? JSON.parse(localStorage.getItem('history')) : [];
 };
@@ -13,9 +13,9 @@ let history = prepareModule();
 
 export const setLocal = (weather) => {
     history.unshift(weather);
-    history = _.uniqBy(history, (e) => e.location)
-	history = _.take(history, 5)
-	localStorage.setItem('history', JSON.stringify(history))
+    history = _.uniqBy(history, (e) => e.location);
+	history = _.take(history, 5);
+	localStorage.setItem('history', JSON.stringify(history));
 };
 
 export const printHistory = () => {
